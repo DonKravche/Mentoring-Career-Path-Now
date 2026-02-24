@@ -1,5 +1,220 @@
+/* =========================
+   VARIABLES
+========================= */
+
+$primary: #052a44;
+$text-dark: #183b56;
+$text-body: #071210;
+$white: #ffffff;
+
+$font-primary: "Poppins", sans-serif;
+$font-heading: "Plus Jakarta Sans", sans-serif;
+
+$fs-h1: 32px;
+$fs-h2: 28px;
+$fs-body: 16px;
+
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 40px;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+
+$card-shadow: 1.42px 2.85px 27.04px rgba(0, 0, 0, 0.08);
+
+/* =========================
+   MIXINS
+========================= */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin button-base {
+  padding: 10px 20px;
+  border-radius: $radius-sm;
+  border: none;
+  cursor: pointer;
+  font-family: $font-primary;
+  font-weight: 600;
+}
+
+@mixin card {
+  background: $white;
+  border-radius: $radius-md;
+  box-shadow: $card-shadow;
+  position: relative;
+}
+
+/* =========================
+   RESET
+========================= */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  margin: 0 25px;
+  font-family: $font-primary;
+  color: $text-body;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  .navigation {
+    @include flex-between;
+    padding-top: $space-md;
+
+    .ehya-img {
+      height: 40px;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: $space-md;
+
+      i {
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.career-path-now {
+  margin-top: $space-md;
+
+  &-desc-nav {
+    @include flex-center;
+    flex-direction: column;
+    gap: $space-md;
+    text-align: center;
+
+    h2 {
+      font-size: $fs-h1;
+      font-weight: 400;
+      color: $text-dark;
+    }
+
+    p {
+      font-size: $fs-body;
+      line-height: 28px;
+      max-width: 600px;
+    }
+
+    .career-btns {
+      display: flex;
+      gap: $space-sm;
+
+      button {
+        @include button-base;
+
+        &:first-child {
+          background: $primary;
+          color: $white;
+        }
+
+        &:last-child {
+          background: transparent;
+          color: $primary;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-us {
+  margin-top: $space-lg;
+  text-align: center;
+
+  h2 {
+    font-size: $fs-h2;
+    margin-bottom: $space-sm;
+  }
+
+  > p {
+    font-size: $fs-body;
+    line-height: 28px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .mission-talent-unique {
+    margin-top: $space-lg;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .mtu-card {
+      @include card;
+      padding: 20px;
+
+      .mtu-header {
+        @include flex-center;
+        position: absolute;
+        width: 51px;
+        height: 51px;
+        background: $primary;
+        border-radius: 50%;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+          width: 24px;
+        }
+      }
+
+      .mtu-main {
+        padding: 40px 20px 20px;
+
+        h3 {
+          font-family: $font-heading;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: $fs-body;
+          line-height: 180%;
+        }
+      }
+    }
+
+    .mtu-btn {
+      @include button-base;
+      background: $primary;
+      color: $white;
+      width: 120px;
+      height: 40px;
+      margin: 0 auto;
+    }
+  }
 }
