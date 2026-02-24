@@ -1,7 +1,163 @@
+/* =========================
+   VARIABLES
+========================= */
+/* =========================
+   MIXINS
+========================= */
+/* =========================
+   RESET
+========================= */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0 25px;
+  font-family: "Poppins", sans-serif;
+  color: #071210;
+}
+
+/* =========================
+   HEADER
+========================= */
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+header .navigation .ehya-img {
+  height: 40px;
+}
+header .navigation .nav-icons {
+  display: flex;
+  gap: 20px;
+}
+header .navigation .nav-icons i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.career-path-now {
+  margin-top: 20px;
+}
+.career-path-now-desc-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.career-path-now-desc-nav h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #183b56;
+}
+.career-path-now-desc-nav p {
+  font-size: 16px;
+  line-height: 28px;
+  max-width: 600px;
+}
+.career-path-now-desc-nav .career-btns {
+  display: flex;
+  gap: 10px;
+}
+.career-path-now-desc-nav .career-btns button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.career-path-now-desc-nav .career-btns button:first-child {
+  background: #052a44;
+  color: #ffffff;
+}
+.career-path-now-desc-nav .career-btns button:last-child {
+  background: transparent;
+  color: #052a44;
+}
+.career-path-now-desc-nav .career-btns button:last-child i {
+  margin-right: 5px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-us {
+  margin-top: 40px;
+  text-align: center;
+}
+.about-us h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.about-us > p {
+  font-size: 16px;
+  line-height: 28px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.about-us .mission-talent-unique {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.about-us .mission-talent-unique .mtu-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 1.42px 2.85px 27.04px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding: 20px;
+}
+.about-us .mission-talent-unique .mtu-card .mtu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  background: #052a44;
+  border-radius: 50%;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-us .mission-talent-unique .mtu-card .mtu-header img {
+  width: 24px;
+}
+.about-us .mission-talent-unique .mtu-card .mtu-main {
+  padding: 40px 20px 20px;
+}
+.about-us .mission-talent-unique .mtu-card .mtu-main h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about-us .mission-talent-unique .mtu-card .mtu-main p {
+  font-size: 16px;
+  line-height: 180%;
+}
+.about-us .mission-talent-unique .mtu-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background: #052a44;
+  color: #ffffff;
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
