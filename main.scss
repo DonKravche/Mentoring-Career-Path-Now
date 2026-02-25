@@ -102,6 +102,7 @@ header {
 
 .career-path-now {
   margin-top: $space-md;
+  overflow-x: hidden;
 
   &-desc-nav {
     @include flex-center;
@@ -144,7 +145,25 @@ header {
       }
     }
   }
+
+  .career-path-banner {
+    position: relative;
+    margin-top: 25px;
+    width: 320px;
+    height: 290px;
+    background-color: #D8CD73;
+    border-radius: 20px;
+
+    img {
+      position: absolute;
+      width: auto;
+      height: 355px;
+      right: -108px;
+      bottom: 0;
+    }
+  }
 }
+
 
 /* =========================
    ABOUT SECTION
@@ -159,7 +178,7 @@ header {
     margin-bottom: $space-sm;
   }
 
-  > p {
+  >p {
     font-size: $fs-body;
     line-height: 28px;
     max-width: 600px;

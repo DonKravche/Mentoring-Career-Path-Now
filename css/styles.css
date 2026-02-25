@@ -45,6 +45,7 @@ header .navigation .nav-icons i {
 
 .career-path-now {
   margin-top: 20px;
+  overflow-x: hidden;
 }
 .career-path-now-desc-nav {
   display: flex;
@@ -86,6 +87,21 @@ header .navigation .nav-icons i {
 }
 .career-path-now-desc-nav .career-btns button:last-child i {
   margin-right: 5px;
+}
+.career-path-now .career-path-banner {
+  position: relative;
+  margin-top: 25px;
+  width: 320px;
+  height: 290px;
+  background-color: #D8CD73;
+  border-radius: 20px;
+}
+.career-path-now .career-path-banner img {
+  position: absolute;
+  width: auto;
+  height: 355px;
+  right: -108px;
+  bottom: 0;
 }
 
 /* =========================
