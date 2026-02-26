@@ -1,0 +1,49 @@
+// =========================
+//   COLORS
+// =========================
+
+$primary: #052a44;
+$text-dark: #183b56;
+$text-light: #5a7184;
+$text-body: #071210;
+$text-black: #000000;
+$white: #ffffff;
+$color-yellow: rgba(232, 219, 132, 1); // used in services & contact sections
+
+// =========================
+//   TYPOGRAPHY
+// =========================
+
+$font-primary: "Poppins", sans-serif;
+$font-heading: "Plus Jakarta Sans", sans-serif;
+
+$fs-h1: 32px;
+$fs-h2: 28px;
+$fs-h3: 20px;
+$fs-h4: 42px;
+$fs-body: 16px;
+$fs-para: 18px;
+$fs-reviews: 12px;
+
+$font-weight-h3: 700;
+$font-weight-h4: 600;
+$font-weight-reviews: 400;
+
+// =========================
+//   SPACING
+// =========================
+
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 40px;
+
+// =========================
+//   BORDERS & SHADOWS
+// =========================
+
+$radius-sm: 8px;
+$radius-md: 12px;
+
+$card-shadow: 1.42px 2.85px 27.04px rgba(0, 0, 0, 0.08);
+$card-shadow-sm: 0.74px 1.48px 14.03px 0px rgba(0, 0, 0, 0.08);
+$card-shadow-hover: 0 12px 30px rgba(5, 42, 68, 0.18);

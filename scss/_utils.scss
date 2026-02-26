@@ -1,0 +1,4 @@
+// Convenience file — forward both variables and mixins
+// so each partial only needs: @use 'utils' as *;
+@forward "variables";
+@forward "mixins";
