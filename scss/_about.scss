@@ -7,6 +7,9 @@
 .about-us {
   margin-top: $space-lg;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
     font-size: $fs-h2;
@@ -70,14 +73,25 @@
         }
       }
     }
+  }
+
+  .mtu-btn {
+    @include button-base;
+    background: $primary;
+    color: $white;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .mission-talent-unique {
+      flex-direction: row;
+      gap: 20px;
+    }
 
     .mtu-btn {
-      @include button-base;
-      background: $primary;
-      color: $white;
-      width: 120px;
-      height: 40px;
-      margin: 0 auto;
+      margin-top: 20px;
     }
   }
 }

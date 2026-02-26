@@ -139,4 +139,36 @@ footer {
       color: $text-black;
     }
   }
+
+  .cpy-right {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+
+    .footer-header,
+    .footer-midd-content,
+    .footer-footer {
+      flex: 1;
+      text-align: center;
+    }
+
+    hr {
+      width: 100%;
+      color: rgba(228, 216, 216, 1);
+    }
+
+    .cpy-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      width: 100%;
+    }
+  }
 }
