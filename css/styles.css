@@ -465,6 +465,90 @@ footer .footer-footer a {
   display: none;
 }
 
+/* =========================
+   CONTACT FORM SECTION
+========================= */
+.contact-form-section {
+  background-color: #e8db84;
+  padding: 60px 40px;
+  border-radius: 29px;
+  margin: 50px 0;
+  text-align: center;
+}
+.contact-form-section .contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact-form-section .contact-container h2 {
+  font-size: 42px;
+  font-weight: 600;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.contact-form-section .contact-container p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #000000;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-form-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form-section .contact-form .input-group {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .contact-form-section .contact-form .input-group {
+    flex-direction: column;
+  }
+}
+.contact-form-section .contact-form input,
+.contact-form-section .contact-form textarea {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  outline: none;
+  background: #ffffff;
+}
+.contact-form-section .contact-form input::placeholder,
+.contact-form-section .contact-form textarea::placeholder {
+  color: #7e7e7e;
+}
+.contact-form-section .contact-form textarea {
+  min-height: 150px;
+  resize: none;
+}
+.contact-form-section .contact-form .contact-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background: #052a44;
+  color: #ffffff;
+  align-self: center;
+  padding: 15px 50px;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.contact-form-section .contact-form .contact-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
 @media (min-width: 768px) {
   .stories {
     display: block;
