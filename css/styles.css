@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -23,7 +28,7 @@ ul {
    GLOBAL
 ========================= */
 body {
-  margin: 0 25px;
+  padding: 0 25px;
   font-family: "Poppins", sans-serif;
   color: #071210;
 }
@@ -39,6 +44,7 @@ header .navigation {
   position: relative;
 }
 header .navigation .ehya-img {
+  width: 100px;
   height: 40px;
 }
 header .navigation {
@@ -63,7 +69,8 @@ header .navigation .nav-menu {
   position: absolute;
   top: 100%;
   right: -100%;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 100vh;
   background: white;
   list-style: none;
@@ -151,19 +158,86 @@ header .navigation .menu-checkbox:checked ~ .nav-menu {
   margin-right: 5px;
 }
 .career-path-now .career-path-banner {
-  position: relative;
-  margin-top: 25px;
-  width: 320px;
-  height: 290px;
-  background-color: #d8cd73;
-  border-radius: 20px;
+  display: none;
 }
-.career-path-now .career-path-banner img {
-  position: absolute;
-  width: auto;
-  height: 355px;
-  right: -108px;
-  bottom: 0;
+.career-path-now .career-path-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.career-path-now .career-path-cards .card-1 {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.74px 1.48px 14.03px 0px rgba(0, 0, 0, 0.08);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  gap: 20px;
+}
+.career-path-now .career-path-cards .card-1 h3 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: -1%;
+}
+.career-path-now .career-path-cards .card-1 p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  color: rgb(46, 46, 46);
+  font-weight: 350;
+}
+.career-path-now .career-path-cards .card-1 i {
+  font-size: 30px;
+  color: rgb(5, 42, 68);
+}
+.career-path-now .career-path-cards .card-2,
+.career-path-now .career-path-cards .card-3 {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.74px 1.48px 14.03px 0px rgba(0, 0, 0, 0.08);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  gap: 10px;
+  padding: 16px;
+}
+.career-path-now .career-path-cards .card-2 h3,
+.career-path-now .career-path-cards .card-3 h3 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.career-path-now .career-path-cards .card-2 p,
+.career-path-now .career-path-cards .card-3 p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  color: rgb(46, 46, 46);
+  font-weight: 350;
+}
+.career-path-now .career-path-cards .card-2 .team-container,
+.career-path-now .career-path-cards .card-3 .team-container {
+  display: flex;
+  justify-content: center;
+}
+.career-path-now .career-path-cards .card-2 .team-container .profile-img,
+.career-path-now .career-path-cards .card-3 .team-container .profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -8px;
+  border: 2px solid white;
+}
+.career-path-now .career-path-cards .card-2 .team-container .profile-img:first-child,
+.career-path-now .career-path-cards .card-3 .team-container .profile-img:first-child {
+  margin-left: 0;
 }
 
 /* =========================
