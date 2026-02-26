@@ -1,0 +1,125 @@
+@use "utils" as *;
+
+// =========================
+//   HERO / CAREER PATH
+// =========================
+
+.career-path-now {
+  margin-top: $space-md;
+  overflow-x: hidden;
+
+  &-desc-nav {
+    @include flex-center;
+    flex-direction: column;
+    gap: $space-md;
+    text-align: center;
+
+    h2 {
+      font-size: $fs-h1;
+      font-weight: 400;
+      color: $text-dark;
+    }
+
+    p {
+      font-size: $fs-body;
+      line-height: 28px;
+      max-width: 600px;
+    }
+
+    .career-btns {
+      display: flex;
+      gap: $space-sm;
+
+      button {
+        @include button-base;
+
+        &:first-child {
+          background: $primary;
+          color: $white;
+        }
+
+        &:last-child {
+          background: transparent;
+          color: $primary;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .career-path-banner {
+    display: none;
+  }
+
+  .career-path-cards {
+    @include flex-column;
+    align-items: center;
+    gap: 20px;
+
+    // Shared card base — unique styles override below
+    .card-1 {
+      @include card-item;
+      gap: 20px;
+
+      h3 {
+        font-size: $fs-h3;
+        font-family: $font-primary;
+        font-weight: $font-weight-h3;
+        letter-spacing: -1%;
+      }
+
+      p {
+        font-family: $font-heading;
+        font-size: $fs-para;
+        color: rgba(46, 46, 46, 1);
+        font-weight: 350;
+      }
+
+      i {
+        font-size: 30px;
+        color: $primary;
+      }
+    }
+
+    .card-2,
+    .card-3 {
+      @include card-item;
+      gap: 10px;
+      padding: 16px;
+
+      h3 {
+        font-size: $fs-h3;
+        font-family: $font-primary;
+        font-weight: $font-weight-h3;
+      }
+
+      p {
+        font-family: $font-heading;
+        font-size: 13px;
+        color: rgba(46, 46, 46, 1);
+        font-weight: 350;
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: center;
+
+        .profile-img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: -8px;
+          border: 2px solid white;
+        }
+
+        .profile-img:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

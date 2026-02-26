@@ -1,0 +1,83 @@
+@use "utils" as *;
+
+// =========================
+//   ABOUT SECTION
+// =========================
+
+.about-us {
+  margin-top: $space-lg;
+  text-align: center;
+
+  h2 {
+    font-size: $fs-h2;
+    margin-bottom: $space-sm;
+  }
+
+  > p {
+    font-size: $fs-body;
+    line-height: 28px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .mission-talent-unique {
+    margin-top: $space-lg;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .mtu-card {
+      @include card;
+      padding: 20px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: $card-shadow-hover;
+      }
+
+      .mtu-header {
+        @include flex-center;
+        position: absolute;
+        width: 51px;
+        height: 51px;
+        background: $primary;
+        border-radius: 50%;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+          width: 24px;
+        }
+      }
+
+      .mtu-main {
+        padding: 40px 20px 20px;
+
+        h3 {
+          font-family: $font-heading;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: $fs-body;
+          line-height: 180%;
+        }
+      }
+    }
+
+    .mtu-btn {
+      @include button-base;
+      background: $primary;
+      color: $white;
+      width: 120px;
+      height: 40px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use "utils" as *;
+
+// =========================
+//   GLOBAL BASE
+// =========================
+
+body {
+  padding: 0 25px;
+  font-family: $font-primary;
+  color: $text-body;
+}

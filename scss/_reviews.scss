@@ -1,0 +1,151 @@
+@use "utils" as *;
+
+// =========================
+//   REVIEWS SECTION
+// =========================
+
+.profile-pic {
+  width: 45.85px;
+}
+
+.reviews {
+  text-align: center;
+  padding: 0 24px;
+
+  &-heading {
+    color: $text-dark;
+    font-size: $fs-h2;
+    font-weight: $font-weight-reviews;
+    padding-top: 32px;
+  }
+
+  &-text {
+    color: $text-light;
+    padding-top: 16px;
+    font-size: $fs-body;
+    line-height: 28px;
+  }
+
+  &-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &-cont {
+    box-shadow: 1.31px 2.62px 18.34px 0px #00000014;
+    border-radius: 10px;
+    padding: 20.96px;
+
+    @include flex-column;
+    @include flex-center;
+    gap: 15px;
+  }
+
+  &-profile-wrapper {
+    @include flex-row;
+    @include flex-center;
+    gap: 15px;
+  }
+
+  &-name-wrapper {
+    @include flex-column;
+    @include flex-center;
+  }
+
+  &-name-wrapper h5 {
+    font-size: 11.79px;
+    font-weight: 700;
+  }
+
+  &-name-wrapper p {
+    font-size: 9.17px;
+    font-weight: $font-weight-reviews;
+  }
+
+  @media (min-width: 768px) {
+    &-heading {
+      font-weight: $font-weight-h4;
+      font-size: $fs-h4;
+      color: $text-black;
+    }
+
+    &-text {
+      font-size: $fs-para;
+      color: $text-black;
+      padding-bottom: 40px;
+    }
+
+    &-container-wrapper {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &-name-wrapper h5 {
+      font-size: $fs-para;
+    }
+
+    &-name-wrapper p {
+      font-size: 14px;
+    }
+
+    &-cont {
+      padding: 24px;
+      max-width: 400px;
+    }
+  }
+}
+
+.review-text {
+  font-weight: $font-weight-reviews;
+  font-size: $fs-reviews;
+  color: $text-black;
+  text-align: center;
+}
+
+.see-more {
+  @include button-base;
+  background-color: $primary;
+  color: white;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .review-text {
+    font-size: $fs-body;
+    line-height: 24px;
+  }
+
+  .see-more {
+    display: none;
+  }
+
+  .arrow-wrap {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .arrow {
+    display: flex;
+    width: 48px;
+    height: 49px;
+    cursor: pointer;
+
+    @include flex-center;
+
+    img {
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  .active {
+    background-color: $primary;
+    width: 48px;
+    height: 49px;
+    display: flex;
+    border-radius: 6px;
+  }
+}
