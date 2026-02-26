@@ -260,6 +260,13 @@ header {
       height: 200px;
       border-radius: 15px;
       gap: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(5, 42, 68, 0.18);
+      }
 
       h3 {
         font-size: $fs-h3;
@@ -293,6 +300,13 @@ header {
       border-radius: 15px;
       gap: 10px;
       padding: 16px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(5, 42, 68, 0.18);
+      }
 
       h3 {
         font-size: $fs-h3;
@@ -357,6 +371,13 @@ header {
     .mtu-card {
       @include card;
       padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(5, 42, 68, 0.18);
+      }
 
       .mtu-header {
         @include flex-center;
@@ -459,10 +480,50 @@ footer {
       align-items: center;
       gap: 20px;
 
-      i {
+      a {
+        width: 55px;
+        height: 55px;
+        background-color: $white;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        @include flex-center;
+        position: relative;
+        overflow: hidden;
         text-decoration: none;
-        color: $text-black;
-        font-size: 25px;
+        z-index: 1;
+
+        i {
+          color: $text-black;
+          font-size: 22px;
+          position: relative;
+          transition: color 0.5s, transform 0.5s;
+          z-index: 3;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: top 0.5s;
+          z-index: 2;
+        }
+
+        &:hover i {
+          color: $white;
+          transform: rotateY(360deg);
+        }
+
+        &:hover::before {
+          top: 0;
+        }
+
+        // Brand colors per icon
+        &:nth-child(1)::before { background: #3b5999; } // Facebook
+        &:nth-child(2)::before { background: #000000; } // X / Twitter
+        &:nth-child(3)::before { background: #e1306c; } // Instagram
       }
     }
   }

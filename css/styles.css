@@ -177,6 +177,12 @@ header .navigation .menu-checkbox:checked ~ .nav-menu {
   height: 200px;
   border-radius: 15px;
   gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.career-path-now .career-path-cards .card-1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(5, 42, 68, 0.18);
 }
 .career-path-now .career-path-cards .card-1 h3 {
   font-size: 20px;
@@ -207,6 +213,13 @@ header .navigation .menu-checkbox:checked ~ .nav-menu {
   border-radius: 15px;
   gap: 10px;
   padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.career-path-now .career-path-cards .card-2:hover,
+.career-path-now .career-path-cards .card-3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(5, 42, 68, 0.18);
 }
 .career-path-now .career-path-cards .card-2 h3,
 .career-path-now .career-path-cards .card-3 h3 {
@@ -269,6 +282,12 @@ header .navigation .menu-checkbox:checked ~ .nav-menu {
   box-shadow: 1.42px 2.85px 27.04px rgba(0, 0, 0, 0.08);
   position: relative;
   padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.about-us .mission-talent-unique .mtu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(5, 42, 68, 0.18);
 }
 .about-us .mission-talent-unique .mtu-card .mtu-header {
   display: flex;
@@ -369,10 +388,52 @@ footer .footer-midd-content .social-media-links {
   align-items: center;
   gap: 20px;
 }
-footer .footer-midd-content .social-media-links i {
+footer .footer-midd-content .social-media-links a {
+  width: 55px;
+  height: 55px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
+  z-index: 1;
+}
+footer .footer-midd-content .social-media-links a i {
   color: #000000;
-  font-size: 25px;
+  font-size: 22px;
+  position: relative;
+  transition: color 0.5s, transform 0.5s;
+  z-index: 3;
+}
+footer .footer-midd-content .social-media-links a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 0.5s;
+  z-index: 2;
+}
+footer .footer-midd-content .social-media-links a:hover i {
+  color: #ffffff;
+  transform: rotateY(360deg);
+}
+footer .footer-midd-content .social-media-links a:hover::before {
+  top: 0;
+}
+footer .footer-midd-content .social-media-links a:nth-child(1)::before {
+  background: #3b5999;
+}
+footer .footer-midd-content .social-media-links a:nth-child(2)::before {
+  background: #000000;
+}
+footer .footer-midd-content .social-media-links a:nth-child(3)::before {
+  background: #e1306c;
 }
 footer .footer-footer {
   display: flex;
