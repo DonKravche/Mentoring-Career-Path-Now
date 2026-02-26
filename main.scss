@@ -4,6 +4,7 @@
 
 $primary: #052a44;
 $text-dark: #183b56;
+$text-light:#5A7184;
 $text-body: #071210;
 $text-black: #000000;
 $white: #ffffff;
@@ -17,9 +18,11 @@ $fs-h3: 20px;
 $fs-h4: 42px;
 $fs-body: 16px;
 $fs-para: 18px;
+$fs-reviews: 12px;
 
 $font-weight-h3: 700;
 $font-weight-h4: 600;
+$font-weight-reviws:400;
 $font-style-h4: semi-bold;
 
 $space-sm: 10px;
@@ -571,7 +574,6 @@ header {
 
 /* =========================
    CONTACT FORM SECTION
-========================= */
 
 .contact-form-section {
   background-color: #e8db84;
@@ -799,6 +801,12 @@ footer {
   }
 }
 
+
+
+.stories {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .stories {
     display: block;
@@ -811,8 +819,10 @@ footer {
     @include flex-center;
     gap: 87px;
 
-    padding: 40px 80px 0 59px;
+    padding: 40px 80px 65px 59px;
     border-radius: 29px;
+    max-width: 1240px;
+    margin: 0 auto;
   }
 
   .text-wrapper {
@@ -865,3 +875,141 @@ footer {
     margin-top: 32px;
   }
 }
+.profile-pic{
+  width: 45.85px;
+}
+.reviews {
+  text-align: center; 
+  padding: 0 24px;    
+
+  &-heading {
+    color: $text-dark;
+    font-size: $fs-h2;
+    font-weight: $font-weight-reviws;
+    padding-top: 32px;
+  }
+
+  &-text {
+    color: $text-light;
+    padding-top: 16px;
+    font-size: $fs-body;
+    line-height: 28px;
+  }
+  &-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:24px ;
+  }
+  &-cont{
+    box-shadow: 1.31px 2.62px 18.34px 0px #00000014 ;
+    border-radius: 10px;
+    padding: 20.96px;
+
+    @include flex-column;
+    @include flex-center;
+    gap: 15px;
+   
+  }
+  &-profile-wrapper{
+    @include flex-row;
+    @include flex-center;
+    gap: 15px;
+  }
+  &-name-wrapper{
+    @include flex-column;
+    @include flex-center;
+  }
+   &-name-wrapper h5{
+    font-size: 11.79px;
+    font-weight: 700;
+    font-style: bold;
+
+   }
+   &-name-wrapper p{
+    font-size: 9.17px;
+    font-weight: $font-weight-reviws;
+    font-style: regular;
+   }
+
+   @media (min-width: 768px) {
+    &-heading {
+      font-weight: $font-weight-h4;
+      font-size: $fs-h4;
+      color: $text-black;
+    }
+
+    &-text {
+     font-size: $fs-para;
+     color: $text-black;
+     padding-bottom: 40px;
+    }
+    
+    &-container-wrapper {
+      flex-direction: row; 
+      justify-content: center;
+    }
+     &-name-wrapper h5{
+      font-size: $fs-para;
+     }
+     &-name-wrapper p{
+      font-size: 14px;
+     }
+     &-cont{
+      padding: 24px;
+      max-width: 400px;
+     }
+  }
+}
+.review-text{
+  font-weight: $font-weight-reviws;
+  font-size: $fs-reviews;
+  color: $text-black;
+  text-align: center;
+}
+.see-more{
+  @include button-base;
+  background-color: $primary;
+  color: white;
+  margin-top: 32px;
+}
+
+@media (min-width: 768px){
+  .review-text{
+    font-size: $fs-body;
+    line-height: 24px;
+
+  }
+  .see-more{
+    display: none;
+  }
+  .arrow-wrap{
+    display: flex;       
+    gap: 15px;           
+    justify-content: center; 
+    margin-top: 24px;
+  }
+  .arrow{
+    display: flex;
+    width: 48px;         
+    height: 49px;        
+    cursor: pointer;
+
+    @include flex-center;
+
+    img {
+    width: 24px;       
+    height: auto;
+  }
+  }
+   .active{
+    background-color: $primary;
+    width: 48px;
+    height: 49px;
+    display: flex;
+    border-radius: 6px;
+
+  }
+}
+
+
+
