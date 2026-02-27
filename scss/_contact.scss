@@ -1,89 +1,111 @@
 @use "utils" as *;
 
-// =========================
-//   CONTACT FORM SECTION
-// =========================
+/* =========================
+   CONTACT SECTION
+========================= */
 
 .contact-form-section {
+  margin: 80px auto;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: $color-yellow;
+  border-radius: 30px;
   padding: 60px 40px;
-  border-radius: 29px;
-  margin: 50px 0;
   text-align: center;
+}
 
-  .contact-container {
-    max-width: 900px;
-    margin: 0 auto;
-
-    h2 {
-      font-size: $fs-h4;
-      font-weight: 600;
-      font-family: $font-heading;
-      margin-bottom: 20px;
-      color: $text-black;
-    }
-
-    p {
-      font-size: $fs-para;
-      margin-bottom: 40px;
-      line-height: 1.6;
-      color: $text-black;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.contact-container {
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: $font-heading;
+    margin-bottom: 20px;
+    color: $text-black;
   }
 
-  .contact-form {
-    display: flex;
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    color: $text-black;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-family: $font-primary;
+  font-size: 16px;
+  outline: none;
+  background: $white;
+
+  &::placeholder {
+    color: #7e7e7e;
+  }
+}
+
+textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.contact-btn {
+  align-self: center;
+  background: $primary;
+  color: $white;
+  padding: 15px 50px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .input-group {
     flex-direction: column;
-    gap: 20px;
+  }
+}
 
-    .input-group {
-      display: flex;
-      gap: 20px;
+/* =========================
+   DESKTOP 1200px+
+========================= */
 
-      @media (max-width: 768px) {
-        flex-direction: column;
-      }
-    }
+@media (min-width: 1200px) {
+  .contact-container {
+    padding: 80px 80px;
+  }
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 18px;
-      border: none;
-      border-radius: $radius-md;
-      font-family: $font-primary;
-      font-size: $fs-body;
-      outline: none;
-      background: $white;
-
-      &::placeholder {
-        color: #7e7e7e;
-      }
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: none;
-    }
-
-    .contact-btn {
-      @include button-base;
-      background: $primary;
-      color: $white;
-      align-self: center;
-      padding: 15px 50px;
-      font-size: $fs-para;
-      margin-top: 20px;
-      border-radius: $radius-md;
-      transition: all 0.3s;
-
-      &:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-      }
-    }
+  .contact-container h2 {
+    font-size: 40px;
   }
 }

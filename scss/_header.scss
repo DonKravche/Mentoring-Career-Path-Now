@@ -35,15 +35,15 @@ header {
 
       .burger-label {
         cursor: pointer;
+        padding: 5px;
       }
     }
 
     .nav-menu {
       position: absolute;
       top: 100%;
-      right: -100%;
-      width: 100%;
-      max-width: 350px;
+      left: -50px;
+      width: 100vw;
       height: 100vh;
       background: white;
       list-style: none;
@@ -52,9 +52,11 @@ header {
       margin: 0;
 
       opacity: 0;
-      transition: right 0.3s ease-in-out;
+      transform: translateX(100%);
+      transition:
+        transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
       pointer-events: none;
-      transition: all 0.3s ease-in-out;
       z-index: 100;
 
       li {
@@ -86,8 +88,7 @@ header {
 
     .menu-checkbox:checked ~ .nav-menu {
       opacity: 1;
-      right: 0;
-      transform: translateY(0);
+      transform: translateX(0);
       pointer-events: auto;
     }
     .desktop-nav {
@@ -99,7 +100,9 @@ header {
         margin-left: 20px;
       }
       .nav-icons,
-      .nav-menu {
+      .nav-menu,
+      .dektop-title,
+      .free-trial-btn {
         display: none;
       }
 
@@ -148,6 +151,66 @@ header {
 
           .trial-btn {
             display: none;
+          }
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      margin-left: 0;
+      margin-right: 0;
+
+      .ehya-img {
+        display: none;
+      }
+
+      .ehya-img-desktop,
+      .trial-btn {
+        display: block;
+      }
+
+      .desktop-nav {
+        @include flex-row;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        background-color: rgba(5, 42, 68, 1);
+        color: $white;
+        border-radius: 12px;
+        height: 85px;
+
+        .dektop-title {
+          display: block;
+          color: $white;
+          font-family: $font-primary;
+          font-weight: 500;
+        }
+
+        .desktop-nav-menu {
+          li {
+            a {
+              color: $white;
+              font-family: $font-primary;
+              font-weight: $font-weight-reviews;
+            }
+          }
+        }
+
+        .desktop-actions {
+          i,
+          .sign-in {
+            color: $white;
+          }
+
+          .free-trial-btn {
+            display: block;
+            width: 160px;
+            height: 55px;
+            background-color: $white;
+            color: $text-black;
+            border-radius: $radius-md;
+            font-size: $fs-body;
+            font-weight: $font-weight-h4;
+            font-family: $font-primary;
           }
         }
       }

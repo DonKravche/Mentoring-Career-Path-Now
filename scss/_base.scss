@@ -8,4 +8,105 @@ body {
   padding: 0 25px;
   font-family: $font-primary;
   color: $text-body;
+
+  @media (min-width: 1200px) {
+    padding: 0 80px;
+  }
+}
+
+// =========================
+//   THEME TOGGLE (pure CSS)
+// =========================
+
+.theme-checkbox {
+  display: none;
+}
+
+.light-icon {
+  display: none !important;
+}
+
+.theme-toggle-label {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+body:has(#theme-toggle:checked) {
+  background-color: rgba(5, 42, 68, 1);
+
+  h1, h2, h3, h4, h5, h6, p, a, li {
+    color: $white;
+  }
+
+  // Preserve hero "Career" yellow (desktop)
+  .career-path-now-desktop .desktop-left h2 span {
+    color: #d4a017;
+  }
+
+  // Nav icons
+  .nav-icons .theme-toggle-label i,
+  .desktop-actions .theme-toggle-label i {
+    color: $white;
+  }
+
+  // Mobile nav menu
+  .nav-menu {
+    background: rgba(3, 28, 46, 1);
+
+    li {
+      border-bottom-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  // ── HERO CARDS (mobile + tablet + desktop): white bg — keep text dark ──
+  .card-1, .card-2, .card-3 {
+    h3 { color: $text-dark; }
+    p  { color: rgba(46, 46, 46, 1); }
+    i  { color: $primary; }
+  }
+
+  // ── HERO BUTTONS (all viewports) ──
+  // "Get Started": $primary bg blends into dark page — flip to white
+  .career-btns button:first-child {
+    background: $white;
+    color: $primary;
+  }
+  // "Learn More": transparent bg → white text + border
+  .career-btns button:last-child {
+    color: $white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  // ── ABOUT US CARDS (all viewports): white bg ──
+  .mtu-card {
+    h3 { color: $text-dark; }
+    p  { color: $text-body; }
+  }
+
+  // About "Get Started": same invisible issue — flip to white
+  .mtu-btn {
+    background: $white;
+    color: $primary;
+  }
+
+  // ── SERVICES, STORIES & CONTACT (all viewports): yellow bg — keep text dark ──
+  .services-container,
+  .stories-container,
+  .contact-container {
+    h2, h4, p, li { color: $text-black; }
+  }
+
+  // ── REVIEW CARDS (all viewports): keep white bg + dark text ──
+  .reviews-cont {
+    background: $white;
+
+    h5 { color: $text-dark; }
+    p  { color: $text-body; }
+  }
+
+  .review-text { color: $text-body; }
+
+  // Switch moon → sun
+  .dark-icon { display: none !important; }
+  .light-icon { display: inline-block !important; }
 }

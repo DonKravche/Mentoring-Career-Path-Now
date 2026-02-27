@@ -27,9 +27,13 @@
       <img src="./assets/images/Logo.png" alt="CareerPathNow logo" class="ehya-img" />
 
       <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+      <input type="checkbox" id="theme-toggle" class="theme-checkbox" />
 
       <div class="nav-icons">
-        <i class="fa-solid fa-moon"></i>
+        <label for="theme-toggle" class="theme-toggle-label">
+          <i class="fa-solid fa-moon dark-icon"></i>
+          <i class="fa-solid fa-sun light-icon"></i>
+        </label>
 
         <label for="menu-toggle" class="burger-label">
           <i class="fa-solid fa-bars"></i>
@@ -46,6 +50,7 @@
       </ul>
 
       <div class="desktop-nav">
+        <h2 class="dektop-title">CareerPathNow</h2>
         <ul class="desktop-nav-menu">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -54,9 +59,12 @@
         </ul>
 
         <div class="desktop-actions">
-          <i class="fa-solid fa-moon"></i>
+          <label for="theme-toggle" class="theme-toggle-label">
+            <i class="fa-solid fa-moon dark-icon"></i>
+            <i class="fa-solid fa-sun light-icon"></i>
+          </label>
           <a href="#" class="sign-in">Sign In</a>
-          <button class="trial-btn">Free Trial</button>
+          <button class="free-trial-btn">Free Trial</button>
         </div>
       </div>
     </div>
@@ -229,73 +237,90 @@
     </section>
 
     <section class="services">
-      <div class="services-header">
-        <h2>Our Sercices</h2>
+      <div class="services-container">
 
-        <p>Teachers don’t get lost in the grid view and have a dedicated Podium space.
-          Teachers don’t get lost in the grid view and have a dedicated Podium space.
-        </p>
-      </div>
+        <div class="services-images-wrapper">
+          <div class="services-circle"></div>
 
-      <div class="services-skills">
-        <div class="skill">
-          <i class="fa-solid fa-briefcase"></i>
-          <p>Personality Assessment</p>
+          <div class="services-images">
+            <div class="img-large"></div>
+            <div class="img-small-1"></div>
+            <div class="img-small-2"></div>
+          </div>
         </div>
 
-        <div class="skill">
-          <i class="fa-solid fa-briefcase"></i>
-          <p>Skill Evaluations</p>
+        <div class="services-content">
+          <div class="services-header">
+            <h2>Our Services</h2>
+            <p>
+              Teachers don’t get lost in the grid view and have a dedicated
+              Podium space. Teachers don’t get lost in the grid view and
+              have a dedicated Podium space.
+            </p>
+          </div>
+
+          <div class="services-skills">
+            <div class="skill">
+              <i class="fa-solid fa-briefcase"></i>
+              <p>Personality Assessment</p>
+            </div>
+
+            <div class="skill">
+              <i class="fa-solid fa-briefcase"></i>
+              <p>Skill Evaluations</p>
+            </div>
+
+            <div class="skill">
+              <i class="fa-solid fa-briefcase"></i>
+              <p>Career Workshop</p>
+            </div>
+          </div>
+
+          <div class="services-btn">
+            <button>Get Started</button>
+          </div>
         </div>
 
-        <div class="skill">
-          <i class="fa-solid fa-briefcase"></i>
-          <p>Career Workshop</p>
-        </div>
-      </div>
-
-      <div class="services-images">
-        <div class="img-large"></div>
-        <div class="img-small-1"></div>
-        <div class="img-small-2"></div>
-      </div>
-
-      <div class="services-circle"></div>
-
-      <div class="services-btn">
-        <button>Get Started</button>
       </div>
     </section>
 
     <section class="stories">
-      <div class="stories-card">
-
-        <div class="text-wrapper">
+      <div class="stories-container">
+        <div class="stories-content">
           <h4>Stories</h4>
-          <p>Teachers don’t get lost in the grid view and have a dedicated Podium space.
-            Teachers don’t get lost in the grid view and have a dedicated Podium space.
-          </p>
-          <p>Teachers don’t get lost in the grid view and have a dedicated Podium space.
-            Teachers don’t get lost in the grid view and have a dedicated Podium space.
+
+          <p>
+            Teachers don’t get lost in the grid view and have a dedicated
+            Podium space. Teachers don’t get lost in the grid view and
+            have a dedicated Podium space.
           </p>
 
-          <ul class="services-list">
-            <li class="service-item">
-              <div class="icon-circle"><img src="./assets/images/case-icon.png" alt="Skill Evaluations icon"></img>
+          <p>
+            Teachers don’t get lost in the grid view and have a dedicated
+            Podium space. Teachers don’t get lost in the grid view and
+            have a dedicated Podium space.
+          </p>
+
+          <ul class="stories-list">
+            <li class="story-item">
+              <div class="icon-circle">
+                <img src="./assets/images/case-icon.png" alt="Skill Evaluations icon">
               </div>
               Skill Evaluations
             </li>
 
-            <li class="service-item">
-              <div class="icon-circle"><img src="./assets/images/case-icon.png" alt="Career Workshop icon"></img></div>
+            <li class="story-item">
+              <div class="icon-circle">
+                <img src="./assets/images/case-icon.png" alt="Career Workshop icon">
+              </div>
               Career Workshop
             </li>
           </ul>
 
-          <button class="mtu-btn">Get Started</button>
+          <button class="stories-btn">Get Started</button>
         </div>
 
-        <div class="image-wrapper">
+        <div class="stories-image-wrapper">
           <img src="./assets/images/stories-img.png" alt="Stories image">
         </div>
 
