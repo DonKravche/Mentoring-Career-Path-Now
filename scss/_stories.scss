@@ -15,12 +15,14 @@
 
 @media (min-width: 768px) {
   .stories-card {
-    flex-direction: column;
+    flex-direction: row;     /* Change from column to row */
+    justify-content: space-between; /* Pushes text to one side, image to the other */
+    align-items: center;     /* Centers them vertically against each other */
+    
     min-height: 598px;
     background-color: $color-yellow;
-    @include flex-center;
+    display: flex;           /* Ensure flex is active */
     gap: 87px;
-
     padding: 40px 80px 65px 59px;
     border-radius: 29px;
     max-width: 1240px;
@@ -31,11 +33,18 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: center;
+    align-items: flex-start; /* Aligns text to the left instead of center */
+    flex: 1;                 /* Allows text to take up half the space */
 
     h4, p {
-      text-align: center;
+      text-align: left;      /* Standard desktop look is left-aligned */
     }
+  }
+
+  .image-wrapper {
+    flex: 1;                 /* Allows image to take up the other half */
+    display: flex;
+    justify-content: center;
   }
 
   .text-wrapper h4 {
