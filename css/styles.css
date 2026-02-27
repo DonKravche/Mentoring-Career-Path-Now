@@ -761,12 +761,12 @@ header .navigation .desktop-nav {
 
 @media (min-width: 768px) {
   .stories-card {
-    flex-direction: column;
+    flex-direction: row; /* Change from column to row */
+    justify-content: space-between; /* Pushes text to one side, image to the other */
+    align-items: center; /* Centers them vertically against each other */
     min-height: 598px;
     background-color: rgb(232, 219, 132);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Ensure flex is active */
     gap: 87px;
     padding: 40px 80px 65px 59px;
     border-radius: 29px;
@@ -777,10 +777,16 @@ header .navigation .desktop-nav {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: center;
+    align-items: flex-start; /* Aligns text to the left instead of center */
+    flex: 1; /* Allows text to take up half the space */
   }
   .text-wrapper h4, .text-wrapper p {
-    text-align: center;
+    text-align: left; /* Standard desktop look is left-aligned */
+  }
+  .image-wrapper {
+    flex: 1; /* Allows image to take up the other half */
+    display: flex;
+    justify-content: center;
   }
   .text-wrapper h4 {
     font-size: 42px;
