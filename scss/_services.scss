@@ -130,6 +130,7 @@
 
   .services-btn {
     @include button-base;
+
     button {
       background: $primary;
       color: $white;
@@ -137,6 +138,23 @@
       height: 40px;
       margin: 0 auto;
       border-radius: 10px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &{
+      align-items: center;
+    }
+
+    .services-circle {
+      width: 150px;
+      height: 150px;
+      bottom: 80px;
+      left: 20px;
+    }
+
+    .services-btn {
+      padding-bottom: 30px;
     }
   }
 }

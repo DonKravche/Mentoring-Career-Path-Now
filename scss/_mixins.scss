@@ -49,6 +49,7 @@
 // Shared styles for hero cards (.card-1, .card-2, .card-3)
 @mixin card-item {
   @include flex-column;
+  background: $white;
   box-shadow: $card-shadow-sm;
   justify-content: center;
   text-align: center;

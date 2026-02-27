@@ -122,4 +122,212 @@
       }
     }
   }
+
+}
+
+.career-path-now-desktop {
+  display: none;
+  padding: 60px 40px;
+
+  .desktop-container {
+    @include flex-row;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // ── LEFT COLUMN ──────────────────────────────
+  .desktop-left {
+    @include flex-column;
+    flex: 1;
+    gap: 36px;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+      font-family: $font-primary;
+      line-height: 1.2;
+      color: $text-dark;
+
+      span {
+        color: #d4a017;
+      }
+    }
+
+    p {
+      font-size: $fs-body;
+      color: $text-light;
+      line-height: 28px;
+    }
+
+    .career-btns {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      button {
+        @include button-base;
+
+        &:first-child {
+          background: $primary;
+          color: $white;
+        }
+
+        &:last-child {
+          background: transparent;
+          color: $primary;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+    }
+
+    .desktop-students {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .student-imgs {
+        display: flex;
+
+        img {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: -10px;
+          border: 2px solid $white;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-dark;
+        margin: 0;
+      }
+    }
+  }
+
+  // ── RIGHT COLUMN ─────────────────────────────
+  .desktop-right {
+    flex: 1;
+    position: relative;
+    height: 500px;
+
+    .yellow-bg {
+      position: absolute;
+      width: 110%;
+      height: 80%;
+      background-color: $color-yellow;
+      border-radius: 20px;
+      right: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+
+    > img {
+      position: absolute;
+      right: -35px;
+      bottom: 50px;
+      z-index: 1;
+      height: 80%;
+      width: auto;
+      object-fit: contain;
+      object-position: bottom right;
+    }
+
+    .career-path-cards {
+      position: absolute;
+      left: -55px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include flex-column;
+      gap: 10px;
+      z-index: 2;
+
+      .card-1 {
+        @include card-item;
+        width: 130px;
+        height: auto;
+        min-height: unset;
+        padding: 14px;
+        gap: 6px;
+
+        h3 {
+          font-size: 14px;
+          font-family: $font-primary;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 12px;
+          color: rgba(46, 46, 46, 1);
+          margin: 0;
+        }
+
+        i {
+          font-size: 24px;
+          color: $primary;
+        }
+      }
+
+      .card-2,
+      .card-3 {
+        @include card-item;
+        width: 130px;
+        height: auto;
+        min-height: unset;
+        padding: 14px;
+        gap: 6px;
+
+        h3 {
+          font-size: 14px;
+          font-family: $font-primary;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 12px;
+          color: rgba(46, 46, 46, 1);
+          margin: 0;
+        }
+
+        .team-container {
+          display: flex;
+          justify-content: center;
+
+          .profile-img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: -6px;
+            border: 2px solid $white;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .career-path-now {
+    display: none;
+  }
+
+  .career-path-now-desktop {
+    display: block;
+  }
 }
