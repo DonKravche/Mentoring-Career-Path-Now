@@ -1,86 +1,153 @@
 @use "utils" as *;
 
-// =========================
-//   STORIES SECTION
-// =========================
+/* =========================
+   STORIES SECTION
+========================= */
 
 .stories {
   display: none;
+  margin: 80px auto;
+}
 
-  @media (min-width: 768px) {
+/* Show from tablet */
+@media (min-width: 768px) {
+  .stories {
     display: block;
-    margin: $space-lg 0;
   }
 }
 
-@media (min-width: 768px) {
-  .stories-card {
-    flex-direction: column;
-    min-height: 598px;
-    background-color: $color-yellow;
-    @include flex-center;
-    gap: 87px;
+.stories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: $color-yellow;
+  border-radius: 30px;
+  padding: 60px 40px;
 
-    padding: 40px 80px 65px 59px;
-    border-radius: 29px;
-    max-width: 1240px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* =========================
+   TEXT SIDE
+========================= */
+
+.stories-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+
+  h4 {
+    font-size: 28px;
+    font-weight: 600;
+    color: $text-black;
   }
 
-  .text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 520px;
+    color: $text-black;
+  }
+}
 
-    h4, p {
-      text-align: center;
+.stories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.story-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  font-size: 16px;
+  color: $text-black;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.stories-btn {
+  margin-top: 30px;
+  background: $primary;
+  color: $white;
+  width: 150px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+/* =========================
+   IMAGE SIDE
+========================= */
+
+.stories-image-wrapper {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+}
+
+/* =========================
+   DESKTOP 1200px+
+========================= */
+
+@media (min-width: 1200px) {
+  .stories-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 80px;
+  }
+
+  .stories-content {
+    width: 45%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .story-item {
+    justify-content: flex-start;
+  }
+
+  .stories-image-wrapper {
+    width: 50%;
+    justify-content: flex-end;
+
+    img {
+      max-width: 500px;
     }
   }
 
-  .text-wrapper h4 {
-    font-size: $fs-h4;
-    font-weight: $font-weight-h4;
-    color: $text-black;
-  }
-
-  .text-wrapper p {
-    font-size: $fs-para;
-    color: $text-black;
-    max-width: 515px;
-  }
-
-  .services-list {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 20px;
-    margin-top: 24px;
-  }
-
-  .service-item {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    font-size: $fs-para;
-    color: $text-black;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .icon-circle {
-    border-radius: 50%;
-    background-color: white;
-    width: 53px;
-    height: 53px;
-    @include flex-center;
-  }
-
-  .mtu-btn {
-    @include button-base;
-    background: $primary;
-    color: $white;
-    width: 120px;
-    height: 40px;
-    margin-top: 32px;
+  .stories-content h4 {
+    font-size: 36px;
   }
 }

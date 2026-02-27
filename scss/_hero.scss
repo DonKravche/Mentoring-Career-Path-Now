@@ -122,12 +122,11 @@
       }
     }
   }
-
 }
 
 .career-path-now-desktop {
   display: none;
-  padding: 60px 40px;
+  padding: 60px 0;
 
   .desktop-container {
     @include flex-row;
@@ -329,5 +328,22 @@
 
   .career-path-now-desktop {
     display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .career-path-now {
+    .career-path-banner {
+      display: block;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h2 {
+      font-size: 40px;
+    }
   }
 }
